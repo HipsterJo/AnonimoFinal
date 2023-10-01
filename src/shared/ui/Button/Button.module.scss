@@ -1,0 +1,69 @@
+.Button {
+  font-family: var(--font-family-main);
+  font-size: var(--font-size-m);
+  line-height: var(--font-line-m);
+  padding: 10px 30px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+  border-radius: 4px;
+  outline: none;
+ 
+  &.solid {
+    background-color: var(--gray-color);
+    color: var(--primary-color);
+    &:hover {
+      color: var(--primary-color);
+      background-color:var(--secondary-color) ;
+      
+    }
+
+    &.secondary{
+      color: var(--primary-color);
+      background-color: var(--purple-color);
+      &:hover {
+        color: var(--primary-color);
+        background-color: var(--inverted-purple-color);
+      }
+    }
+
+  }
+
+  &.outline {
+    background-color: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    &:hover {
+      color: var(--secondary-color);
+      border: 2px solid var(--secondary-color);
+    }
+
+    &.secondary{
+      color: var(--purple-color);
+      border: 2px solid var(--purple-color);
+      &:hover {
+        color: var(--inverted-purple-color);
+        border: 2px solid var(--inverted-purple-color);
+      }
+    }
+  }
+
+  &.clear {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: none;
+    &:hover {
+      color: var(--secondary-color);
+    }
+    &.secondary{
+      color: var(--purple-color);
+      &:hover {
+        color: var(--inverted-purple-color);
+      }
+    }
+ 
+  }
+
+  
+
+}

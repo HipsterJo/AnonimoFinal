@@ -1,0 +1,16 @@
+.Input{
+    width:100%;
+    border:2px solid var(--gray-color);
+    border-radius:5px;
+    margin:3px 0;
+    outline:none;
+    padding:8px;
+    box-sizing:border-box;
+    transition:.3s;
+    font: var(--font-m);
+}
+
+input:focus{
+    border-color:var(--purple-color);
+    box-shadow:0 0 3px 0 var(--purple-color);
+  }

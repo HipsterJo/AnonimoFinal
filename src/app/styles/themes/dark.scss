@@ -1,5 +1,12 @@
-.app.dark{
-    --bg-color: #345995;
-    --primary-color: #eac435;
-    --secondary-color: #03CEA4;
-}
+.dark__theme{
+    --bg-color: #0E0E0E;
+    --bg-color-secondary: #1C1C1C;
+   
+    --primary-color: #FFFFFF;
+    --secondary-color: #7B9DAA;
+    --inverted-primary-color: #FFFFFF; 
+    --inverted-purple-color: #7E56D2;
+    --purple-color: #713ABF;
+    --gray-color: #808A9F;
+    --inverted-gray-color: #526662;
+} 

@@ -1,14 +1,17 @@
- 
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500;700&display=swap');
  :root{
-    --font-family-main: 'Roboto', sans-serif;
+    --font-family-main: 'Open-Sans', sans-serif;
 
-    --font-size-m: 16px;
-    --font-line-m: 24px;
+    --font-size-m: 18px;
+    --font-line-m: 26px;
 
     --font-m: var(--font-size)/var(--font-line-m) var(--font-family-main);
 
-    --font-size-l: 18px;
-    --font-line-l: 32px;
+    --font-size-l: 20px;
+    --font-line-l: 38px;
 
     --font-l: var(--font-size-l)/var(--font-line-l) var(--font-family-main);
+
+    //Размеры
+    --navbar-height: 50px;
  }

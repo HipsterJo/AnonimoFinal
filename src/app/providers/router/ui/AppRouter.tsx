@@ -7,6 +7,7 @@ import { routeConfig } from "../../../../shared/config/routeConfig/routeConfig"
 
 
 const AppRouter = ()=>{
+  
     return(
         <Suspense fallback={<div>Loading...</div>}>
         <Routes>

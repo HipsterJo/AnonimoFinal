@@ -1,29 +1,54 @@
-import "./styles/index.scss";
+
 import { useTheme } from "./providers/ThemeProvider/lib/useTheme";
-import { Link, Route, Routes } from "react-router-dom";
-import { MainPage } from "../pages/MainPage";
-import { AboutPage } from "../pages/AboutPage";
-import { Suspense } from "react";
 import { classNames } from "../helpers/classNames/classNames";
 import { AppRouter } from "./providers/router";
+import Navbar from '../widgets/Navbar'
+import {Modal} from "../shared/ui/Modal/Modal";
+import { useState } from "react";
+import LoginModal from "../features/AuthByUserName/ui/LoginModal/LoginModal";
+import Button, { ButtonThemes } from "../shared/ui/Button/Button";
 
-export enum Theme {
-  LIGHT = "light",
-  DARK = "dark",
-}
+
 
 function App() {
-  const { theme, toggleTheme } = useTheme();
+  const { theme } = useTheme( );
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
 
   return (
     <>
       <div className={classNames("app", {}, [theme])}>
-        <button onClick={toggleTheme}>TOGGLE</button>
-        <h1>Привет мир!</h1>
-        <p>Привет, это начало пути!</p>
-        <Link to={"/"}>Главная</Link>
-        <Link to={"/about"}>О сайте</Link>
+      <Navbar/>
+        <Button primary={true} themes={ ButtonThemes.SOLID} onClick={() => setIsModalOpen(true)}>OPEN </Button>
+        <LoginModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} className=""/>
+        <div className="main_container">
+         
+          <Button secondary={true} themes={ ButtonThemes.CLEAR} >
+            Clear
+          </Button>
+          <Button secondary={true} themes={ ButtonThemes.OUTLINE} >
+            Outline
+          </Button>
+          <Button secondary={true} themes={ ButtonThemes.SOLID} >
+            Filled
+          </Button>
+          
+          <Button primary={true} themes={ ButtonThemes.CLEAR} >
+            Clear
+          </Button>
+          <Button primary={true} themes={ ButtonThemes.OUTLINE} >
+            Outline
+          </Button>
+          <Button primary={true} themes={ ButtonThemes.SOLID} >
+            Filled
+          </Button>
+        </div>
+
+
+        
+        
         <AppRouter/>
+       
       </div>
     </>
   );
